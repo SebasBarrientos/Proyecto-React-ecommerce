@@ -10,11 +10,14 @@ const Cart = () => {
 
   if (cart.length == 0) {
     return (
+      <div className="mt-6">
+
       <Empty description={<span>Empty cart </span>}>
         <Button type="primary">
           <Link to="/products">Buy Now</Link>
         </Button>
       </Empty>
+      </div>
     );
   }
   return (
