@@ -14,6 +14,7 @@ const Profile = () => {
   }
   return (
     <div>
+      {console.log(user.Orders)}
       <p> {user.name}</p>
       <p> {user.email}</p>
     </div>
