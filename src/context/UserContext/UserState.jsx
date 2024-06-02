@@ -68,6 +68,15 @@ const initialState = {
       } catch (error) {
           console.error(error);
       }
+    } 
+    const register = async(newUser)=>{
+      try {
+          await axios.post(API_URL,newUser)
+          }
+  
+       catch (error) {
+          console.error(error);
+      }
     }
     return (
       <UserContext.Provider
@@ -76,7 +85,8 @@ const initialState = {
           user: state.user,
           login,
           getLoggedUserInfo,
-          logout
+          logout,
+          register
         }}
       >
         {children}

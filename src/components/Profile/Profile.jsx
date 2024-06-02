@@ -16,7 +16,7 @@ const Profile = () => {
   const renderOrders = () => {
     return user.Orders.map((order, index) => (
       <div key={index} className="border rounded-lg shadow-lg p-4 mb-4">
-        <h2 className="text-lg font-bold mb-2">Pedido {index + 1}</h2>
+        <h2 className="text-lg font-bold mb-2">Order {index + 1}</h2>
         <ul className="list-disc pl-4">
           {order.Products.map((product, productIndex) => (
             <li key={productIndex}>{product.name}</li>
@@ -28,15 +28,16 @@ const Profile = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Perfil de Usuario</h1>
+      {console.log(user)}
+      <h1 className="text-2xl font-bold mb-4">User profile</h1>
       <div className="bg-white rounded-lg shadow-lg p-4">
-        <p className="text-lg font-semibold mb-2">Nombre:</p>
+        <p className="text-lg font-semibold mb-2">Name:</p>
         <p>{user.name}</p>
-        <p className="text-lg font-semibold mb-2">Correo Electrónico:</p>
+        <p className="text-lg font-semibold mb-2">Email:</p>
         <p>{user.email}</p>
       </div>
       <div className="mt-8">
-        <h2 className="text-xl font-bold mb-4">Tus Pedidos</h2>
+        <h2 className="text-xl font-bold mb-4">Your orders</h2>
         {renderOrders()}
       </div>
     </div>

@@ -10,10 +10,16 @@ const products = (state, action) => {
         ...state,
         cart: [...state.cart, action.payload],
       };
+
     case "CLEAR_CART":
       return {
         ...state,
         cart: [],
+      };
+      case "DELETE_FROM_CART":
+      return {
+        ...state,
+        cart: action.payload,
       };
     default:
       return state;
