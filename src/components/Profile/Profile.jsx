@@ -28,7 +28,6 @@ const Profile = () => {
 
   return (
     <div className="container mx-auto p-4">
-      {console.log(user)}
       <h1 className="text-2xl font-bold mb-4">User profile</h1>
       <div className="bg-white rounded-lg shadow-lg p-4">
         <p className="text-lg font-semibold mb-2">Name:</p>

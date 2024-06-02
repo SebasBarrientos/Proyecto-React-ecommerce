@@ -3,9 +3,7 @@ import axios from "axios"
 const API_URL = "http://localhost:3000/orders";
 
 const createOrder =async (cart)=>{
-    console.log(cart);
     const productsIds = cart.map(product=>product.id)
-    console.log(productsIds);
     const token = localStorage.getItem("token")
     await axios.post(API_URL,{ProductId:productsIds},{
         headers:{

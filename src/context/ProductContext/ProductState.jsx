@@ -47,7 +47,6 @@ export const ProductProvider = ({ children }) => {
     })
   }
   const addProductsToDB = async (formData) => {
-    console.log(token);
     await axios.post(API_URL, formData, {
       headers: {
         "Content-Type": "multipart/form-data",

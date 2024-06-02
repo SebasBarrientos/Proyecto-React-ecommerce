@@ -12,7 +12,6 @@ import { notification } from 'antd';
 
 const Cart = () => {
   const { token, } = useContext(UserContext);
-  console.log(token);
   if (token == "") {
    return (
    <div className="flex flex-col items-center text-center py-8">

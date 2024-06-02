@@ -6,12 +6,9 @@ const ProductsAdmin = () => {
     const { addProductsToDB } = useContext(ProductContext)
     const navigate = useNavigate()
     const [file, setFile] = useState(null);
-    useEffect(() => {
-        console.log(file)
-    }, [file])
+   
     const handleFileChange = async (e) => {
         setFile(e.target.files[0]);
-        console.log(e.target.files[0]);
     };
     const handleSubmit = async (e) => {
         const formData = new FormData();
