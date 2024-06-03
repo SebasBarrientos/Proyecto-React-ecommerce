@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { ProductContext } from '../../context/ProductContext/ProductState';
 import { useNavigate } from 'react-router-dom';
 import { notification } from 'antd';
